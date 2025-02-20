@@ -6,4 +6,9 @@ from flask_login import LoginManager
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = "hello world"
+
+    @app.route("/")
+    def home():
+        return "<h1>Hello</h1>"
+
     return app
